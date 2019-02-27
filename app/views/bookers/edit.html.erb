@@ -1,0 +1,15 @@
+<div class="edit-books">
+    <h1>遺伝子組み換え中</h1> 
+    <%= form_for(@booker) do |f| %>
+    
+        <h2>タネの名前</h2>
+        <%= f.text_field :title, class: "book_title" %>
+        
+        <h2>水分・肥料</h2>
+        <%= f.text_area :body, class: "book_body" %>
+        
+        <%= f.submit '更新' %>
+        
+    <% end %>
+    <%= link_to '観察', booker_path(@booker), class: "show_#{@booker.id}"%> <%= link_to 'Back', bookers_path, class: "destroy_#{@booker.id}" %>
+</div>

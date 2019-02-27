@@ -1,0 +1,8 @@
+<div class="showing">
+    <% if flash[:notice] %>
+    <%= flash[:notice] %>
+    <% end %>
+    <h1><%= @booker.title %></h1>
+    <p><%= @booker.body %></p>
+    <%= link_to '遺伝子組み換え', edit_booker_path(@booker), class: "edit_#{@booker.id}" %> <%= link_to 'Back', bookers_path, class: "back" %>
+</div>
